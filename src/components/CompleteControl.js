@@ -9,7 +9,7 @@ class CompleteControl extends Component {
     render() {
         return(
             <div className="complete-control">
-                <input type="checkbox" />
+                <input type="checkbox"/>
                 <label />
             </div>
         );

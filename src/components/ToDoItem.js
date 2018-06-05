@@ -8,7 +8,9 @@ class ToDoItem extends Component {
 
     render() {
         return(
-            <div className="todo-item"><span>{this.props.description}</span><CompleteControl /></div>
+            <div className="todo-item" style={{
+                textDecoration: this.props.completed ? 'line-through' : 'none'
+              }}><span>{this.props.description}</span><CompleteControl /></div>
         );
     }
 }
