@@ -6,15 +6,10 @@ class ToDoCollection extends Component {
         super(props);
     }
 
-    onToDoClick(id) {
-        //this.setState(this.prop)
-        alert(id);
-    }
-
     render() {
         return (
             <div className="todo-collection">
-            {this.props.todos.map(todo => <ToDoItem id={todo.id} description={todo.description} onToDoClick={this.onToDoClick.bind(this)}/>)}
+            {this.props.todos.map(todo => <ToDoItem id={todo.id} description={todo.description} done={todo.done} onToDoClick={this.props.onToDoClick}/>)}
             </div>
         );
     }

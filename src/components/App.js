@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ToDoCollection todos={this.props.todos}/>
+        <ToDoCollection todos={this.props.todos} onToDoClick={this.props.onToDoClick}/>
       </div>
     );
   }
@@ -21,14 +21,14 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    todos: state.todos
+    todos: state
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    onToDoClick: (event, index) => {
-      dispatch(toggleToDo(index));
+    onToDoClick: (id) => {
+      dispatch(toggleToDo(id));
     }
   }
 }

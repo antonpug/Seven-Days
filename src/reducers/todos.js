@@ -1,5 +1,4 @@
-const defaultState = {
-  todos: [{
+const defaultState = [{
     'id': 1,
     'description': 'Clean basement',
     'done': false
@@ -11,15 +10,14 @@ const defaultState = {
     'id': 3,
     'description': 'Book plane tickets to Hawaii',
     'done': false
-  }]
-};
+  }];
 
 const todos = (state = defaultState, action) => {
   switch (action.type) {
     case 'TOGGLE_TODO':
       return state.map(todo =>
         (todo.id === action.id)
-          ? {...todo, completed: !todo.completed}
+          ? {...todo, done: !todo.done}
           : todo
       )
     default:
