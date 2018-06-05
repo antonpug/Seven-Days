@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ToDoItem from './ToDoItem';
-import { toggleToDo } from '../actions/index';
 
 class ToDoCollection extends Component {
     constructor(props) {
@@ -8,7 +7,8 @@ class ToDoCollection extends Component {
     }
 
     onToDoClick(id) {
-        this.props.store.dispatch(toggleToDo(id));
+        //this.setState(this.prop)
+        alert(id);
     }
 
     render() {

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './assets/logo.svg';
 import './css/App.css';
 import ToDoCollection from './ToDoCollection';
+import { connect } from 'react-redux';
+import { toggleToDo } from '../actions/todoActions'
 
 class App extends Component {
   constructor(props) {
@@ -9,13 +11,27 @@ class App extends Component {
   }
 
   render() {
-    todos = [{id: '1', description: 'apples'}, {id: '2', description: 'oranges'}, {id: '3', description: 'bananas'}];
     return (
       <div className="App">
-        <ToDoCollection store={this.props.store} todos={todos}/>
+        <ToDoCollection todos={this.props.todos}/>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    todos: state.todos
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onToDoClick: (event, index) => {
+      dispatch(toggleToDo(index));
+    }
+  }
+}
+
+const VisibleApp = connect(mapStateToProps, mapDispatchToProps) (App);
+export default VisibleApp;
