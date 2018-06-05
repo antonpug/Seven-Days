@@ -9,5 +9,5 @@ import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(rootReducer);
 
-ReactDOM.render(<Provider><App /></Provider>, document.getElementById('root'));
+ReactDOM.render(<Provider><App store={store}/></Provider>, document.getElementById('root'));
 registerServiceWorker();

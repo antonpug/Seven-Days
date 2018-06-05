@@ -10,7 +10,7 @@ class ToDoItem extends Component {
         return(
             <div className="todo-item" style={{
                 textDecoration: this.props.completed ? 'line-through' : 'none'
-              }}><span>{this.props.description}</span><CompleteControl /></div>
+              }}><span>{this.props.description}</span><CompleteControl id={this.props.id} onToDoClick={this.props.onToDoClick}/></div>
         );
     }
 }
