@@ -10,6 +10,14 @@ const defaultState = [{
     'id': 3,
     'description': 'Book plane tickets to Hawaii',
     'done': false
+  }, {
+    'id': 4,
+    'description': 'Call mom',
+    'done': false
+  }, {
+    'id': 5,
+    'description': 'Reach out to John about weekend plans',
+    'done': false
   }];
 
 const todos = (state = defaultState, action) => {

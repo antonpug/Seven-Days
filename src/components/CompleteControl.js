@@ -9,10 +9,12 @@ class CompleteControl extends Component {
     render() {
         return(
             <div className="complete-control">
-                <input type="checkbox" onClick={event => {
-                    this.props.onToDoClick(this.props.id);
-                }}/>
-                <label />
+                <div className="checkbox">
+                    <input type="checkbox" id={this.props.id} onClick={event => {
+                        this.props.onToDoClick(this.props.id);
+                    }}/>
+                    <label for={this.props.id}/>
+                </div>
             </div>
         );
     }
