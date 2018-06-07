@@ -1,11 +1,8 @@
 .complete-control {
     display: inline-block;
-    margin: 10px;
-}
-
-.checkbox:not(last-of-type) {
-    display: inline-block;
-    margin-right: 40px;
+    margin: 10px 20px 10px 10px;
+    width: 40px;
+    height: 100%;
 }
 
 .checkbox {
@@ -18,8 +15,8 @@
     left: 0;
     width: 40px;
     height: 40px;
-    background-color: #c8dbff;
-    border: 1px solid #c8dbff;
+    background-color: #fff;
+    border: 1px solid #fff;
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 300ms ease, colour 300ms ease, box-shadow 300ms ease;
@@ -44,8 +41,8 @@
 }
 
 .checkbox input:checked+label {
-    background-color: #356cd2;
-    border-color: #356cd2;
+    background-color: #283593;
+    border-color: #283593;
     box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -54,6 +51,6 @@
 }
 
 .checkbox input:checked+label {
-    background-color: #356cd2;
-    border-color: #356cd2;
+    background-color: #283593;
+    border-color: #283593;
 }

@@ -11,7 +11,7 @@ class ToDoItem extends Component {
         return(
             <div className="todo-item" style={{
                 textDecoration: this.props.done ? 'line-through' : 'none',
-                backgroundColor: this.props.done ? '#dddfd4' : '#173e43'
+                backgroundColor: this.props.done ? '#9fa8da' : '#283593'
               }}><CompleteControl id={this.props.id} onToDoClick={this.props.onToDoClick}/><span className="todo-description">{this.props.description}</span></div>
         );
     }
